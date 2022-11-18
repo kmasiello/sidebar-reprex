@@ -1,0 +1,12 @@
+Issue:
+Any page that is *referenced* by a sidebar will have that sidebar applied to it, even if a separate definition for that page's sidebar exists in `_quarto.yml` 
+
+
+Observed Behavior:
+In this repo, observe that the "Get Started" page has a sidebar defined in `_quarto.yml` and that the "Other" page has zero definition for a sidebar.  However, because both are referenced in the `sidebar: id: gallery`, both of these pages have the sidebar for the Gallery applied.
+
+
+Expected Behavior:
+A page will only have the sidebar defined by its `sidebar: id`.
+
+In this example, I would expect that "Get Started" and "Gallery" would have the sidebars defined by their respective ids and called out by the `_metadata.yml` file in their directories.  I also would expect that "Other" would not have a sidebar.

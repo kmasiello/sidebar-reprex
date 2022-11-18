@@ -1,0 +1,43 @@
+project:
+  type: website
+
+website:
+  title: "sidebar-reprex"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - text: Get Started
+        href: get-started/
+      - text: Gallery
+        href: gallery/
+        
+  sidebar: 
+  
+    - id: gallery
+      collapse-level: 2
+      contents:
+        - get-started/index.qmd
+        - text: "---"
+        - section: Gallery
+          contents:
+            - href: gallery/article1/index.qmd
+            - href: gallery/article2/index.qmd
+            - href: gallery/article3/index.qmd
+            - href: gallery/article4/index.qmd
+        - other/index.qmd
+        
+    - id: get-started
+      collapse-level: 2
+      contents:
+        - get-started/index.qmd
+        - text: "---"
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

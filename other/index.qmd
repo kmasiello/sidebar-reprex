@@ -1,0 +1,3 @@
+---
+title: "A folder not in the nav bar"
+---
